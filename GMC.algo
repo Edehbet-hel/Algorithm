@@ -1,0 +1,28 @@
+VAR
+    sentence: STRING
+    i: INTEGER := 1;  
+    word: INTEGER := 1;  
+    vowels: INTEGER := 0;  
+    CHAR_1: INTEGER := 1;  
+BEGIN
+    Read(sentence);  
+    
+    WHILE i <= LENGTH(sentence) DO  
+        IF sentence[i] = " " THEN
+            word := word + 1;  
+        END_IF
+
+        SWITCH sentence[i] DO
+            CASE "a", "e", "i", "o", "u": vowels := vowels + 1;
+        END_SWITCH
+
+        i := i + 1;  
+    END_WHILE
+
+    CHAR_1 := i; 
+    
+    Write(sentence);  
+    Write(word);  
+    Write(vowels); 
+    Write(CHAR_1);  
+END
